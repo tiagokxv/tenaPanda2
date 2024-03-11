@@ -1,7 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://dwkrdwhaok1pa"]
+[gd_scene load_steps=43 format=3 uid="uid://dwkrdwhaok1pa"]
 
 [ext_resource type="Texture2D" uid="uid://snkix5lsfdn2" path="res://models/atlas_texture.png" id="1_b38ir"]
 [ext_resource type="Script" path="res://characters/script/main_character.gd" id="1_x2ic6"]
+[ext_resource type="Script" path="res://characters/script/Panda.gd" id="2_vctbo"]
+[ext_resource type="Script" path="res://characters/scenes/SpringArmOffset.gd" id="4_sg2am"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_syhih"]
 radius = 1.0
@@ -10264,6 +10266,7 @@ shape = SubResource("CapsuleShape3D_syhih")
 
 [node name="Panda" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.459305, 0.119853, 0.0186767)
+script = ExtResource("2_vctbo")
 
 [node name="CharacterArmature" type="Node3D" parent="Panda"]
 
@@ -10595,6 +10598,7 @@ libraries = {
 }
 
 [node name="SpringArmOffset" type="Node3D" parent="."]
+script = ExtResource("4_sg2am")
 
 [node name="SpringArm" type="SpringArm3D" parent="SpringArmOffset"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
